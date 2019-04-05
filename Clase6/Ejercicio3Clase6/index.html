@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="test.js"></script>
+    <title>Formulario de ingreso</title>
+</head>
+<body>
+    <form action="admin.php" method="post" id="frmEmpleado">
+        
+        <label>Ingrese su nombre: </label></br>
+        <input type="text" name="nombre" id="nombre"></br>
+        
+        <label>Ingrese su apellido: </label></br>    
+        <input type="text" name="apellido" id="apellido"></br>
+        
+        <label>Ingrese su DNI: </label></br>
+        <input type="number" name="dni" id="dni"></br>
+        
+        <label>Ingrese su sexo: </label></br>    
+        <select name="cboSexo" id="cboSexo">
+            <option value="F">Femenino</option>
+            <option value="M">Masculino</option>
+        </select></br>
+        
+        <label>Ingrese su legajo: </label></br>
+        <input type="number" name="legajo" id="legajo"></br>
+
+        <label>Ingrese su sueldo: </label></br>
+        <input type="number" name="sueldo" id="sueldo"></br></br>
+
+        <input type="reset" value="Limpiar">
+        <input type="button" onclick="Ingresar()" value="Enviar">
+    </form>
+</body>
+</html>
