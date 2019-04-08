@@ -1,5 +1,5 @@
 "use strict";
-/// <reference path="Persona.ts"/>
+/// <reference path="./Empleado.ts"/>
 function Ingresar() {
     var nombre = document.getElementById("nombre").value;
     var apellido = document.getElementById("apellido").value;

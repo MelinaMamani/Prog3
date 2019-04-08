@@ -1,4 +1,4 @@
-/// <reference path="Persona.ts"/>
+/// <reference path="./Empleado.ts"/>
 
 function Ingresar():void {
 

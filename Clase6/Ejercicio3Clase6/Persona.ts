@@ -1,61 +1,60 @@
 namespace Empleados
 {
-
-export abstract class Persona
-{
-    private _apellido : string;
-    private _dni : number;
-    private _nombre : string;
-    private _sexo : string;
-
-    public constructor(nombre:string, apellido:string, sexo : string, dni : number)
+    export abstract class Persona
     {
-        this._apellido =  apellido;
-        this._dni = dni;
-        this._nombre = nombre;
-        this._sexo = sexo;
-    }
+        private _apellido : string;
+        private _dni : number;
+        private _nombre : string;
+        private _sexo : string;
 
-    /**
-     * GetApellido : devuelve apellido
-     */
-    public GetApellido():string 
-    {
-        return this._apellido;
-    }
+        public constructor(nombre:string, apellido:string, sexo : string, dni : number)
+        {
+            this._apellido =  apellido;
+            this._dni = dni;
+            this._nombre = nombre;
+            this._sexo = sexo;
+        }
 
-    /**
-     * GetNombre : devuelve nombre
-     */
-    public GetNombre():string 
-    {
-        return this._nombre;
-    }
+        /**
+         * GetApellido : devuelve apellido
+         */
+        public GetApellido():string 
+        {
+            return this._apellido;
+        }
 
-    /**
-     * GetSexo
-     */
-    public GetSexo():string 
-    {
-        return this._sexo;
-    }
+        /**
+         * GetNombre : devuelve nombre
+         */
+        public GetNombre():string 
+        {
+            return this._nombre;
+        }
 
-    /**
-     * GetDNI
-     */
-    public GetDNI():number 
-    {
-        return this._dni;
-    }
+        /**
+         * GetSexo
+         */
+        public GetSexo():string 
+        {
+            return this._sexo;
+        }
 
-    public abstract Hablar(idioma:string):string;
+        /**
+         * GetDNI
+         */
+        public GetDNI():number 
+        {
+            return this._dni;
+        }
 
-    /**
-     * ToString
-     */
-    public ToString():string 
-    {
-        return this.GetApellido()+"-"+this.GetNombre()+"-"+this.GetDNI()+"-"+this.GetSexo()+"-";
+        public abstract Hablar(idioma:string):string;
+
+        /**
+         * ToString
+         */
+        public ToString():string 
+        {
+            return this.GetApellido()+"-"+this.GetNombre()+"-"+this.GetDNI()+"-"+this.GetSexo()+"-";
+        }
     }
-}
 }

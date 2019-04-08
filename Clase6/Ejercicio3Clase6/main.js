@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -12,6 +11,49 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var Empleados;
+(function (Empleados) {
+    var Persona = /** @class */ (function () {
+        function Persona(nombre, apellido, sexo, dni) {
+            this._apellido = apellido;
+            this._dni = dni;
+            this._nombre = nombre;
+            this._sexo = sexo;
+        }
+        /**
+         * GetApellido : devuelve apellido
+         */
+        Persona.prototype.GetApellido = function () {
+            return this._apellido;
+        };
+        /**
+         * GetNombre : devuelve nombre
+         */
+        Persona.prototype.GetNombre = function () {
+            return this._nombre;
+        };
+        /**
+         * GetSexo
+         */
+        Persona.prototype.GetSexo = function () {
+            return this._sexo;
+        };
+        /**
+         * GetDNI
+         */
+        Persona.prototype.GetDNI = function () {
+            return this._dni;
+        };
+        /**
+         * ToString
+         */
+        Persona.prototype.ToString = function () {
+            return this.GetApellido() + "-" + this.GetNombre() + "-" + this.GetDNI() + "-" + this.GetSexo() + "-";
+        };
+        return Persona;
+    }());
+    Empleados.Persona = Persona;
+})(Empleados || (Empleados = {}));
 /// <reference path="Persona.ts"/>
 var Empleados;
 (function (Empleados) {
@@ -51,4 +93,15 @@ var Empleados;
     }(Empleados.Persona));
     Empleados.Empleado = Empleado;
 })(Empleados || (Empleados = {}));
-//# sourceMappingURL=Empleado.js.map
+/// <reference path="./Empleado.ts"/>
+function Ingresar() {
+    var nombre = document.getElementById("nombre").value;
+    var apellido = document.getElementById("apellido").value;
+    var dni = parseInt(document.getElementById("dni").value);
+    var sexo = document.getElementById("cboSexo").value;
+    var legajo = parseInt(document.getElementById("legajo").value);
+    var sueldo = parseInt(document.getElementById("sueldo").value);
+    var e = new Empleados.Empleado(nombre, apellido, sexo, dni, legajo, sueldo);
+    console.log(e.ToString());
+    console.log(e.Hablar("español"));
+}
