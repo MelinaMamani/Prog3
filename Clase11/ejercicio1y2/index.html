@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="main.js"></script>
+    <script>
+    var producto = {"codigo":1000, "nombre":"x", "precio":90};
+    alert(producto.nombre+"-"+producto.codigo+"-"+producto.precio);
+    console.log(producto.nombre+"-"+producto.codigo+"-"+producto.precio);
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="mostrar.php" method="get">
+        <input type="button" onclick="Ajax.Mostrar()" value="Llamar a manejadora">
+    </form>
+</body>
+</html>
