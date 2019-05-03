@@ -51,5 +51,23 @@ var Ajax;
         };
     }
     Ajax.Mostrar = Mostrar;
+    function Verificar(nombre) {
+        var accion = 4;
+        var xmlR = new XMLHttpRequest();
+        xmlR.open("GET", "admin.php?nombre=" + nombre + "&accion=" + accion, true);
+        xmlR.send();
+        xmlR.onreadystatechange = function () {
+            if (xmlR.readyState == 4 && xmlR.status == 200) {
+                if (xmlR.responseText == "1") {
+                    return true;
+                }
+                else if (xmlR.responseText == "0") {
+                    return false;
+                }
+            }
+        };
+        return true;
+    }
+    Ajax.Verificar = Verificar;
 })(Ajax || (Ajax = {}));
 //# sourceMappingURL=manejadora.js.map
