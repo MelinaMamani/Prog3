@@ -58,9 +58,13 @@ function EnviarDatos() : void {
     }
 
     function Eliminar(miJson:any) {
-        let xmlR = new XMLHttpRequest();
+        let xmlR : XMLHttpRequest = new XMLHttpRequest();
         let form : FormData = new FormData();
-        form.append('empleado',miJson);
+        let rta = confirm("Está seguro de eliminar al empleado "+miJson.nombre+" "+miJson.apellido+"?");
+        if (!rta) {
+            return;
+        }
+        form.append('legajo',miJson.legajo);
         form.append('op','eliminarEmpleado');
 
         xmlR.open('POST', './BACKEND/nexo.php', true);
@@ -68,8 +72,22 @@ function EnviarDatos() : void {
 
         xmlR.onreadystatechange = () => {
             if (xmlR.readyState == 4 && xmlR.status == 200) {
-                console.log(xmlR.responseText);
+                console.info(xmlR.responseText);
+                let rta = JSON.parse(xmlR.responseText);
+                if (!rta.exito) {
+                    alert("Ha ocurrido un error inesperado.");
+                }
+                else{
+                    MostrarListado();
+                }
             }
         }
+    }
 
+    function Modificar(miJson:any) {
+        (<HTMLInputElement>document.getElementById("nombre")).value = miJson.nombre;
+        (<HTMLInputElement>document.getElementById("apellido")).value = miJson.apellido;
+        (<HTMLInputElement>document.getElementById("cboSexo")).value = miJson.sexo;
+        (<HTMLInputElement>document.getElementById("sueldo")).value = miJson.sueldo;
+        (<HTMLInputElement>document.getElementById("foto")).value = miJson.foto.files[0];
     }

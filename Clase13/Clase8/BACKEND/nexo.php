@@ -58,6 +58,8 @@ switch ($op) {
                 <th>Sexo</th>
                 <th>Sueldo</th>
                 <th>Foto</th>
+                <th>Eliminar</th>
+                <th>Modificar</th>
             </tr>";
         foreach ($empleados as $value) {
             $empleado = new stdClass();
@@ -73,14 +75,41 @@ switch ($op) {
             <td>".$empleado->apellido."</td>
             <td>".$empleado->sexo."</td>
             <td>".$empleado->sueldo."</td>
-            <td><img src='./BACKEND/".$empleado->foto."' height='185px' width='200px'/></td>
+            <td><img src='./BACKEND/".$empleado->foto."' height='75px' width='100px'/></td>
             <td><input type='button' value='X' onclick='Eliminar(".json_encode($empleado).")'></td>
+            <td><input type='button' value='M' onclick='Modificar(".json_encode($empleado).")'></td>
             </tr>";
         }
         echo "</tbody>
         </table>";
         break;
     case 'eliminarEmpleado':
+        $obj = new stdClass();
+        $objAcceso = Acceso::DameUnObjetoAcceso();
+        $obj->exito = true;
+        $legajo = $_POST['legajo'];
+        //$foto = $_FILES['foto']['name'];
+        try{
+            $consulta = $objAcceso->RetornarConsulta("DELETE FROM empleados WHERE legajo =$legajo");
+            //if (file_exists($foto)) {
+            //    unlink($foto);
+            //}
+            $consulta->execute();
+        }
+        catch(PDOException $e)
+        {
+            $obj->exito = false;
+            $obj->mensaje = $e->getMessage();
+        }
+        
+        echo json_encode($obj);
+
+        break;
+    case 'modificarEmpleado':
+        $objAcceso = Acceso::DameUnObjetoAcceso();
+        $legajo = $_POST['legajo'];
+        $consulta = $objAcceso->RetornarConsulta("UPDATE empleados SET ");
+        $consulta->execute();
         
         break;
     default:
