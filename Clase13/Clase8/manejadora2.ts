@@ -7,10 +7,16 @@ function EnviarDatos() : void {
         let xhr : XMLHttpRequest = new XMLHttpRequest();
         let nombre = (<HTMLInputElement> document.getElementById("nombre"));
         let legajo = (<HTMLInputElement> document.getElementById("legajo"));
+        let apellido = (<HTMLInputElement> document.getElementById("apellido"));
+        let sexo = (<HTMLInputElement> document.getElementById("cboSexo"));
+        let sueldo = (<HTMLInputElement> document.getElementById("sueldo"));
         let foto : any = (<HTMLInputElement> document.getElementById("foto"));
         let form : FormData = new FormData();
         form.append('nombre',nombre.value);
         form.append('legajo',legajo.value);
+        form.append('apellido',apellido.value);
+        form.append('sexo',sexo.value);
+        form.append('sueldo', sueldo.value);
         form.append('foto', foto.files[0]);
         form.append('op', "subirDatos");
         xhr.open('POST', './BACKEND/nexo.php', true);
@@ -49,4 +55,21 @@ function EnviarDatos() : void {
                 (<HTMLDivElement>document.getElementById("mostrar")).innerHTML = xmlR.responseText;
             }
         }
+    }
+
+    function Eliminar(miJson:any) {
+        let xmlR = new XMLHttpRequest();
+        let form : FormData = new FormData();
+        form.append('empleado',miJson);
+        form.append('op','eliminarEmpleado');
+
+        xmlR.open('POST', './BACKEND/nexo.php', true);
+        xmlR.send(form);
+
+        xmlR.onreadystatechange = () => {
+            if (xmlR.readyState == 4 && xmlR.status == 200) {
+                console.log(xmlR.responseText);
+            }
+        }
+
     }

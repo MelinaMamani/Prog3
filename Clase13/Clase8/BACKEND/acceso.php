@@ -12,7 +12,7 @@ class Acceso
             $user = "root";
             $pass = "";
 
-            $this->_objetoPDO = new PDO("mysql:host=localhost;dbname=escuela;charset=utf8",$user,$pass);
+            $this->_objetoPDO = new PDO("mysql:host=localhost;dbname=empresa;charset=utf8",$user,$pass);
 
         }
         

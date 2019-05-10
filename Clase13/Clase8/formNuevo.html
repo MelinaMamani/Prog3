@@ -8,13 +8,19 @@
     <title>Subir datos</title>
 </head>
 <body>
-    <input type="text" name="nombre" id="nombre" placeholder="Ingrese nombre"></br>
     <input type="number" name="legajo" id="legajo" placeholder="Ingrese legajo"></br>
+    <input type="text" name="nombre" id="nombre" placeholder="Ingrese nombre"></br>
+    <input type="text" name="apellido" id="apellido" placeholder="Ingrese apellido"></br>
+    <label>Ingrese su sexo: </label></br>    
+        <select name="cboSexo" id="cboSexo">
+            <option value="F">Femenino</option>
+            <option value="M">Masculino</option>
+        </select></br>
+    <input type="number" name="sueldo" id="sueldo" placeholder="Ingrese sueldo"></br>
     <input type="file" name="foto" id="foto"></br>
     <input type="button" onclick="EnviarDatos()" value="Enviar datos"></br>
     <img src="" id="foto_mostrar">
     <div id="mostrar"></div>
     
-        
 </body>
 </html>
