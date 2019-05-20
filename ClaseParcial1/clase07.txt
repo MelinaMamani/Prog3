@@ -1,0 +1,60 @@
+                                                                                   Clase 7
+
+
+1-Para comprobar composer le damos desde la consola tipeamos:
+    
+   composer -v
+
+2-Descargamos el framework slim ,  en nuestro projecto para localhost creamos lo siguiente con lso datos:
+
+ composer.json
+
+ Este archivo dentro va a tener el siguiente codigo:
+  
+ {
+	"require":{
+		"slim/slim": "^3.0"
+	}
+ }
+
+ Que cosas requiere que se instale a partir del composer , lo que le indicamos
+ es que nos baje el slim framwork version "3. lo que sea"
+
+3-Vamos a la terminal y ejecutamos:
+ 
+  composer install
+
+ Lo que hace va a buscar como referencia el archivo composer.json y nos instala
+ lo indicado ahi dentro , cuando termina nos genera una carpeta "vendor" (no tocar ya que tiene contenido del framework) y un archivo
+ "composer.lock"
+
+
+Ejercicio 1:
+ Generamos un "index.php" al mismo nivel del "vendor" 
+
+
+2-Si creamos un get con ruteo , tenemos que poner index.php y luego el nombre del parametro
+  para no hacer esto creamos el archivo .HTACCESS y dentro copiamos lo siguiente:
+  
+   RewriteEngine On
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteRule . index.php [L]
+
+  "VERIFICAR QUE NO TENGA espacios ni enters"
+
+Ejercicio 2:
+
+ Generamos un metodo mas que sea el ruteo mostrar por "GET" y le vamos a pasar un parametro , un "nombre" y mostramos ese nombreque le pasamos
+ como parametros pero en mayuscula , para eso a nuestro metodo le agregamos en la funcion el parametro args y dentro de la funcion la "clave"
+ que tenemos como nombre a recibir la mostramos en el getBody()
+
+Ejercicio 3:
+
+ Pasarle parametros(DESDE EL BODY) y recibir elementos de la api que no seasn solo un string sino que sean parametros como en los formularios
+ genere objeto nuevo y genere ID a paratir de un random y retornar un obj de tipo json con el estado que corresponde.
+
+Ejercicio 4 : 
+ Recibimos objeto json (id,nombre y apellido) , recuperamos y mostramos 
+
+
