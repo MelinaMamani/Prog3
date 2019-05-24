@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ingreso (otra vez)</title>
+</head>
+<body>
+    <h1>Formulario de ingreso</h1>
+    <table>
+        <tbody>
+            <form action="admin.php" method="post" enctype="multipart/form-data">
+            <tr>
+                <td>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                </td>
+                <td>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="legajo" id="legajo" placeholder="Número de legajo">
+                </td>
+                <td>
+                    <input type="number" name="sueldo" id="sueldo" placeholder="Sueldo">
+                </td>
+            </tr>
+            <tr>
+                <label>Aquí suba su foto:</label>
+                <input type="file" name="foto" id="foto">
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset" value="Limpiar">
+                </td>
+                <td>
+                    <input type="submit" value="Enviar">
+                </td>
+            </tr>
+        </form>
+        </tbody>
+    </table>
+    <h2>Ver otros empleados</h2>
+    <a href="empleados.php" target="_blank">Click aquí</a>
+</body>
+</html>

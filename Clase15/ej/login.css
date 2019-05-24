@@ -1,0 +1,28 @@
+th{
+    background-color: blue;
+    color: white;
+    font-size: 20pt;
+}
+table{
+    text-align: center;
+    width: 25%;
+    background-color: aquamarine;
+}
+span{
+    font-family: 'Lucida Sans', Verdana, sans-serif;
+}
+input[type=button]{
+    width: 100%;
+}
+input[type=text],input[type=password]{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Aceptar{
+    background-color: greenyellow;
+    color: black;
+}
+.Cancelar{
+    background-color: red;
+    color: black;
+}
