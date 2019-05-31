@@ -1,0 +1,12 @@
+[
+    {"id" : "az", "descripcion" : "Azul"},
+    {"id" : "ro", "descripcion" : "Rojo"},
+    {"id" : "ve", "descripcion" : "Verde"},
+    {"id" : "am", "descripcion" : "Amarillo"},
+    {"id" : "vio", "descripcion" : "Violeta"},
+    {"id" : "gr", "descripcion" : "Gris"},
+    {"id" : "ne", "descripcion" : "Negro"},
+    {"id" : "bla", "descripcion" : "Blanco"},
+    {"id" : "cel", "descripcion" : "Celeste"},
+    {"id" : "esm", "descripcion" : "Esmeralda"}
+]

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./FRONTEND/Manejadota2.js"></script>
+</head>
+<body>
+        <!--enctype debe ser de tipo "multipart/formdata"-->
+    
+        Tamaño<output></output>:<input type ="text"  id="tamaño"name="tamaño" ><br>
+        Edad:<input type ="number" id="edad" name="edad" ><br>
+        Precio:<input type="number" id="precio" name="precio" ><br>
+        Nombre:<input type="text" id="nombre" name="nombre"><br>
+        <select id="raza" style="max-width:180px;min-width:130px" > 
+                <option>salchicha</option>
+                <option>chihuahua</option>
+                <option>pitbull</option>
+                <option>caniche</option>
+            </select><br>
+
+       
+        <!--Input -> de tipo "file"  -->
+        Ingrese archivo:<input type="file" name="foto" id="foto"><br>
+        
+        <input type="button" value="Agregar JSON" id="btn" onclick="PrimerParcial.Manejadora.AgregarPerroJSON()"><br>
+        <input type="button" value="Mostrar JSON" id="btn" onclick="PrimerParcial.Manejadora.MostrarPerrosJSON()"><br>
+        <input type="button" value="Agregar en Bd" id="btn" onclick="PrimerParcial.Manejadora.AgregarPerroEnBaseDatos()"><br>
+        <input type="button" value="Mostrar  Bd" id="btn" onclick="PrimerParcial.Manejadora.MostrarPerrosBaseDatos()"><br>
+        <input type="button" value="Verificar y Agregar  Bd" id="btn" onclick="PrimerParcial.Manejadora.VerificarExistencia()"><br>
+
+        <br><br><br>
+        <img id="imgFoto" src="./BACKEND/fotos/huella_default.png" width="250px" height="250px" />
+
+    
+    <div id="divTabla"></div>
+
+    
+</body>
+</html>
