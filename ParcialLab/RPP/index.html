@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="./FRONTEND/Manejadota2.js"></script>
+    <script src="./FRONTEND/main.js"></script>
 </head>
 <body>
         <!--enctype debe ser de tipo "multipart/formdata"-->
@@ -17,8 +17,8 @@
         <select id="raza" style="max-width:180px;min-width:130px" > 
                 <option>salchicha</option>
                 <option>chihuahua</option>
-                <option>pitbull</option>
-                <option>caniche</option>
+                <!--<option>pitbull</option>
+                <option>caniche</option>-->
             </select><br>
 
        
@@ -29,10 +29,10 @@
         <input type="button" value="Mostrar JSON" id="btn" onclick="PrimerParcial.Manejadora.MostrarPerrosJSON()"><br>
         <input type="button" value="Agregar en Bd" id="btn" onclick="PrimerParcial.Manejadora.AgregarPerroEnBaseDatos()"><br>
         <input type="button" value="Mostrar  Bd" id="btn" onclick="PrimerParcial.Manejadora.MostrarPerrosBaseDatos()"><br>
-        <input type="button" value="Verificar y Agregar  Bd" id="btn" onclick="PrimerParcial.Manejadora.VerificarExistencia()"><br>
+        <input type="button" value="Verificar y Agregar Bd" id="btn" onclick="PrimerParcial.Manejadora.VerificarExistencia()"><br>
 
         <br><br><br>
-        <img id="imgFoto" src="./BACKEND/fotos/huella_default.png" width="250px" height="250px" />
+        <img id="imgFoto" src="./BACKEND/fotos/perro_default.png" width="300px" height="250px" />
 
     
     <div id="divTabla"></div>
