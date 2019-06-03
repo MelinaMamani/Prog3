@@ -1,0 +1,23 @@
+{
+    "require": {
+        "slim/slim": "^3.0",
+        "firebase/php-jwt": "^4.0",
+        "oscarotero/psr7-middlewares": "^3.20"
+    }
+}
+
+mejor es composer require php-jwt
+
+pbtener payload
+
+grupo jwt post recibe nombre, apellido y division si existe el usuario jwt +  200 sin existe jason devolvera json y 409
+el json tendra mamadef0 sus basicos.
+
+a clse usuario debe tener verificar($user) es publico;
+y traertodos es privado
+taerlistado es publico retorna un string  sòlo se va a llamar a esta funcion en mostrarlistado en la api
+
+middlew si ingresa su nombre es true, sino d json con mensaje y 409
+md fuhcion si datos es nullo es igul a siguente sino devuelve el 409
+
+mostrar llama al tercer metodo de la clase usuario
