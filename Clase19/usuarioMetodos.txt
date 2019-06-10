@@ -1,0 +1,5 @@
+Clase 10/06
+
+Eliminar -> mover a fotos/eliminadas y unlink de fotos 
+
+Modificiar -> mover a fotos/modificadas y unlink de fotos
