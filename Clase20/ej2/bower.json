@@ -1,0 +1,24 @@
+{
+  "name": "bower",
+  "description": "ej2",
+  "main": "index.php",
+  "keywords": [
+    "none"
+  ],
+  "authors": [
+    "MelinaMamani"
+  ],
+  "license": "MIT",
+  "homepage": "ee",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "bootstrap#^3.3.7",
+    "bootstrapValidator": "bootstrapValidator#^0.5.3"
+  }
+}

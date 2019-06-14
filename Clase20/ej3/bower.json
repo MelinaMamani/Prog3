@@ -1,0 +1,19 @@
+{
+  "name": "ej3",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libreria",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "bootstrap#^3.3.7",
+    "bootstrapValidator": "bootstrapValidator#^0.5.3"
+  }
+}

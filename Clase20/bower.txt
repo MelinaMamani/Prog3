@@ -1,0 +1,5 @@
+instalar bower:
+
+npm install -g bower
+
+bower init
