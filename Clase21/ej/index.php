@@ -15,6 +15,8 @@ $app->group('/usuarios', function (){
     $this->post('/alta', \Usuario::class . '::AltaUsuario');
     $this->post('/traerTodos', \Usuario::class . '::TraerTodosUsuarios');
     $this->post('/traerUno', \Usuario::class . '::TraerUnUsuario');
+    $this->post('/eliminar', \Usuario::class . '::EliminarUsuario');
+    $this->post('/modificar', \Usuario::class . '::ModificarUsuario');
 });
 
 $app->run();
