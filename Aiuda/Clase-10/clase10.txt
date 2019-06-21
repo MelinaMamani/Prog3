@@ -1,0 +1,48 @@
+                    CLASE 10
+Ejemplo 1: generamos un index.html , un formulario , campos (text , password)
+y un button que haga un submit hacia un backend
+
+USAR JAVASCRIPT PARA HACER LAS VALIDACIONES
+
+Ejemplo2: vamos a tratar de hacer el mismo ejemplo pero vamos a agregar
+las librerias y plugins  a partir de un administrador de librerias ,
+
+Gestor de aplicaciones (bower): vamos a la consola y vamos a checkear
+   si esta instalado bower:
+       
+    bower -v
+
+   Para instalarlo hacemos :
+ 
+   npm install -g bower
+
+
+   2)Hacemos el cual nsos genera un archivo de comnfiguracion
+     y nos genera un "bower.json":
+ 
+     bower init
+   
+   3)Despues del ultimo corchete ponemos ","dependencies" y abrimos llaves
+     y ponemos nombre de packete y nombre , y todos los demas
+     el nombre va entre comillas
+
+   4)Solo agregamos lo de bootstrap y nada mas ya que me trae las demas libreri
+     as  como css , jquery , etc
+
+   5) voy a la terminal , toma el archivo de configuracion bower y descarga:
+
+      bower install
+
+   6)Me descargar todo en una carpeta "bower_components" y agrego las referencias
+     en mi index
+     
+
+Ejemplo 3: 
+ 1)En el raiz de nuestro bower.json, vamos a generar archivo ".bowerrc"
+   esto nos permite redireccionar donde van las dependecias del bower instal
+   y vamos a indicarle donde es el directorio de donde vamos a guardar las cosas
+ 2)Dentro de bowerrc , le indico directorio donde quiero que se carguen las 
+   dependecias
+ 3) Lo unico que hace es descargar todo el contenido de "bower_components"
+    dentro de la direccion que le pasamos desde el archivo ".bowerrc" en el 
+    atributo "directory"

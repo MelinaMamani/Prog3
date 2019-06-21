@@ -1,0 +1,44 @@
+          
+APIS:                                     CLASE 10
+-Alta
+-Verificar
+-TraerTodos
+-TraerUno
+
+-Eliminar() ->le pasamos el "legajo" del operario que queremos eliminar y lo elimina
+-Modificar()  ->le pasamos el "legajo(primary key)" mas el json del operario con los datos modificados
+
+Usuario->atributos
+ -legajo
+ -nombre
+ -mail
+ -clave
+ -sexo
+ -apellido
+ -foto
+ -sueldo
+ -dni
+
+Generamos una interfaz "IApiUsuario" con los siguientes metodos (request,response,args) *misma firma todos*:
+ -AltaUsuario
+ -TraerTodos
+ -TraerUnUsuario
+ -EliminarUsuario
+ -ModificarUsuario
+
+ Implento esta interfaz en la clase usuario y a los metodos
+
+Creamos grupo nuevo dentro de "index.php" llamado Usuario al cual le vamos a dar distintas acciones:
+
+ (post) Alta/   ->recibe el "json" del usuario que recibimos del lado del cliente , la "foto" la enviamos individualmente 
+                  foto + json("user")
+                  -La foto se va a guardar , con "yyyymmdd_legajo.extension"
+                  -Lo que retorna la funcion es un "json" con tres atributos "Exito , Mensaje y status(200OK,404error)"
+                  -Dentro de este verbo llamamos a "AltaUsuario"
+                  -Metodos de la foto que recupero getClientFileName()->me devuelve el nombre
+                   MoveTo->MUEVE LA FOTO HACIA DONDE QUIERO
+
+ TraerUnUsuario y TraerTodosUsuarios () -> devuelve un objJson con el json del usuario y con Exito y Mensaje
+
+ (delete) Eliminar -> a la foto que borramos la movemos al repositorio fotos/eliminadas
+ (put) Modificar -> a la foto que modificamos la movemos al repositorio fotos/Modificadas

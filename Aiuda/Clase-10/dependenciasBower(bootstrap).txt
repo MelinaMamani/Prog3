@@ -1,0 +1,4 @@
+"dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrapValidator": "bootstrapValidator#^0.5.3"
+  }
